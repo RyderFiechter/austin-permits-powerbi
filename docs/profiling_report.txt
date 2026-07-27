@@ -1,0 +1,119 @@
+RAW SHAPE: (433669, 17)
+COLUMNS: ['issue_date', 'applieddate', 'permit_type_desc', 'permit_class_mapped', 'permit_class', 'work_class', 'status_current', 'total_job_valuation', 'housing_units', 'number_of_floors', 'council_district', 'original_zip', 'latitude', 'longitude', 'contractor_company_name', 'fiscal_year_issued', 'calendar_year_issued']
+
+=== NULL COUNTS (raw) ===
+issue_date                      0
+applieddate                    10
+permit_type_desc                0
+permit_class_mapped             0
+permit_class                    0
+work_class                      0
+status_current                  1
+total_job_valuation        361235
+housing_units              118437
+number_of_floors           114994
+council_district            29538
+original_zip                 1030
+latitude                    70355
+longitude                   70355
+contractor_company_name     77331
+fiscal_year_issued              0
+calendar_year_issued            0
+
+total_job_valuation: null=83.3%, min=0.0, max=8100000000.0
+
+=== permit_type_desc counts ===
+permit_type_desc
+Electrical Permit       129810
+Plumbing Permit         117794
+Building Permit          91724
+Mechanical Permit        80530
+Driveway / Sidewalks     13811
+
+Status filter removed 4,499 rows (Void/Withdrawn/Cancelled). Remaining: 429,170
+
+Wrote data/permits_clean.csv: 429,170 rows x 18 cols
+
+############################################################
+INSIGHTS
+############################################################
+
+=== Share of total valuation by Permit Type ===
+Permit Type
+Building Permit         100.0%
+Plumbing Permit           0.0%
+Electrical Permit         0.0%
+Mechanical Permit         0.0%
+Driveway / Sidewalks      0.0%
+
+=== Valuation by Property Class (Building permits only) ===
+Property Class
+Commercial     $235,654,987,529
+Residential      $2,859,625,815
+
+=== Building-permit valuation by Fiscal Year (outliers capped 1..200M) ===
+                          valuation  permits    yoy_%
+Fiscal Year Issued                                   
+2020                $19,996,435,338     9771         
+2021                $15,217,658,462     9708   -23.9%
+2022                $43,115,665,682     8993  +183.3%
+2023                $17,122,121,374     7655   -60.3%
+2024                $12,037,278,973     5875   -29.7%
+2025                 $5,625,559,643     4449   -53.3%
+2026                 $5,762,893,872     3977    +2.4%
+
+=== Top districts by Building valuation, FY2024 vs FY2023 (capped) ===
+                   FY2023   FY2024    YoY_%
+Council District                           
+2                 $1,428M  $2,913M  +104.0%
+1                 $1,145M  $2,632M  +129.9%
+3                   $970M  $2,023M  +108.5%
+7                 $2,726M  $1,281M   -53.0%
+9                 $2,242M  $1,009M   -55.0%
+4                   $193M    $724M  +275.5%
+8                 $2,704M    $555M   -79.5%
+10                $1,147M    $353M   -69.2%
+5                 $1,140M    $327M   -71.4%
+6                 $3,427M    $221M   -93.5%
+Unknown               $0M      $0M    +2.2%
+
+=== Residential Building valuation by district: FY2024 vs FY2023 ===
+                  FY2023  FY2024   YoY_%
+Council District                        
+7                 $11.2M  $11.3M   +1.0%
+8                 $12.1M  $11.6M   -4.0%
+10                $68.2M  $62.9M   -7.8%
+6                  $3.2M   $2.3M  -27.3%
+5                 $33.1M  $18.6M  -43.9%
+1                 $47.9M  $24.5M  -48.8%
+2                 $87.5M  $33.6M  -61.5%
+3                 $19.2M   $6.8M  -64.5%
+9                 $11.6M   $4.0M  -65.6%
+4                 $29.5M   $0.9M  -97.1%
+
+=== Housing Units Added (Work Class = New) by Fiscal Year ===
+Fiscal Year Issued
+2020    102,425
+2021     71,180
+2022     94,714
+2023     72,789
+2024     73,277
+2025     43,687
+2026     28,803
+
+=== Top 10 contractors by permit count ===
+Contractor Company Name
+In Charge Electrical Services, Llc             8894
+Victory Plumbing Company                       7311
+Ies Residential, Inc.                          5778
+Stan'S Heating, Air, Plumbing, & Electrical    5538
+Christianson Plumbing                          4401
+Landmark Electric                              4362
+Austin Lanehart Electric Co., Inc.             3747
+D R Horton Homes                               3437
+Mccullough Heating & Air                       3202
+Aei Electric Llc                               3200
+
+Avg project value (nonzero valuations): $4,715,805
+Median project value (nonzero): $1
+Rows with valuation > 0: 11.8%

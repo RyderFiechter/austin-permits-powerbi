@@ -1,0 +1,63 @@
+Building permits total: 90534
+With meaningful valuation ($1k-$200M): 22898 (25%)
+
+=== Building valuation & permit COUNT by Property Class (meaningful $) ===
+                    sum$   size
+Property Class                 
+Commercial      $116.02B   6670
+Residential       $2.86B  16228
+  (note: residential $ is understated — many new-home permits filed at $1 placeholder)
+
+=== By Fiscal Year (Building permits) ===
+                 valuation  permits YoY_val%
+FY2020             $20.00B     8204         
+FY2021             $15.22B     5871     -24%
+FY2022             $43.12B     3825    +183%
+FY2023             $17.12B     2114     -60%
+FY2024             $12.04B     1381     -30%
+FY2025              $5.63B      800     -53%
+FY2026 (partial)    $5.76B      703      +2%
+
+=== District opportunity: Building valuation FY2024 vs FY2023 (complete years) ===
+                   FY2023   FY2024   YoY%
+Council District                         
+2                  $1.43B   $2.91B  +104%
+1                  $1.14B   $2.63B  +130%
+3                 $970.2M   $2.02B  +109%
+7                  $2.73B   $1.28B   -53%
+9                  $2.24B   $1.01B   -55%
+4                 $192.9M  $724.1M  +275%
+8                  $2.70B  $554.7M   -79%
+10                 $1.15B  $353.0M   -69%
+5                  $1.14B  $326.5M   -71%
+6                  $3.43B  $221.3M   -94%
+
+=== Trade permits (Elec/Plumb/Mech) count by district, FY2024 vs FY2023 ===
+                  FY2023  FY2024  YoY%
+Council District                      
+10                  5999    5411  -10%
+2                   5107    5196   +2%
+1                   6072    4804  -21%
+7                   4602    4158  -10%
+9                   5382    4111  -24%
+5                   4259    4032   -5%
+8                   3545    3392   -4%
+3                   3353    3180   -5%
+4                   2856    2613   -9%
+6                   2465    2110  -14%
+
+=== Housing Units Added (Work Class = New), by Fiscal Year ===
+Fiscal Year Issued
+2020    102,425
+2021     71,180
+2022     94,714
+2023     72,789
+2024     73,277
+2025     43,687
+2026     28,803
+
+=== Headline scalars (for KPI cards / narrative) ===
+Total permits (FY2020-2026): 429,170
+Total building valuation (meaningful $): $118.88B
+Avg building project value (meaningful $): $5,191,593
+Median building project value (meaningful $): $170,000

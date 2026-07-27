@@ -1,0 +1,15 @@
+# Large data files are regenerable — kept out of the repo to stay lean.
+# A 5,000-row sample (data/permits_clean_sample.csv) IS committed so viewers
+# can see the schema. Regenerate the full files with the scripts in /scripts.
+# (86 MB raw API pull)
+data/permits_raw.csv
+# (67 MB cleaned output)
+data/permits_clean.csv
+
+# Power BI temp/autosave
+*.tmp
+~$*
+
+# Python
+__pycache__/
+*.pyc
