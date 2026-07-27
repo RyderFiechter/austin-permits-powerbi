@@ -3,6 +3,10 @@
 Exact, click-by-click steps. Follow top to bottom; it takes ~2–4 focused hours the first time.
 Everything is validated against the **real** dataset column names.
 
+> **Doubles as PL-300 prep.** Each part below maps to a scored area of the Microsoft PL-300
+> (Power BI Data Analyst) exam: **Part B → Prepare the data (~25%)**, **Part C → Model the data
+> (~25%)**, **Parts D–E → Visualize and analyze (~25%)**, with DAX exercised throughout.
+
 ---
 
 ## Part 0 — Install Power BI Desktop (Windows, free)

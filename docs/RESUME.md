@@ -19,7 +19,7 @@ account-targeting work, so the whole resume tells one story: *finding where dema
   (e.g., scoping dollar analysis to $1k–$200M building permits, which moved the median project value
   from $1 to $170K).
 - Turned the model into a decision: identified that construction dollars are **rotating into
-  Central/East Austin (Districts 1–4, +100–275% YoY)** even as the citywide market cooled, and
+  Central/East Austin (Districts 1–4, +104–275% YoY)** even as the citywide market cooled, and
   recommended segmenting outreach — commercial builders for high-value project tooling, the
   electrical/plumbing/mechanical trades (~328K permits) for volume.
 

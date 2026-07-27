@@ -8,10 +8,9 @@ company that sells software and services to construction contractors.
 > growing — and which districts and project types represent the strongest market opportunity
 > for a company selling to contractors?*
 
-This is a portfolio project built around construction-market domain expertise. It mirrors the
-market-analysis / ETL work already on my resume and my account-targeting work as an SDR, so the
-whole profile tells one coherent story: **I find where demand is forming and turn messy data into
-a targeting decision.**
+Every cleaning, modeling, and measure decision is documented, so the analysis is reproducible and
+the conclusions are defensible. The emphasis throughout is **turning a messy public dataset into a
+market decision** — not just building charts.
 
 ---
 
@@ -74,9 +73,9 @@ throughout this README:
 
 ---
 
-## Method — five stages (each maps to a PL-300 exam area)
+## Method — five stages
 
-### 1. Clean — Power Query  *(“Prepare the data”, ~25%)*
+### 1. Clean — Power Query
 Filtered to FY2020+ first (performance), kept 17 relevant columns, fixed data types, converted
 Council District to a text category (null → `Unknown`), standardized contractor names
 (Trim / Clean / Capitalize), dropped VOID/Withdrawn/Cancelled statuses, and added a `Has Valuation`
@@ -85,7 +84,7 @@ flag. Every step is documented in the Applied Steps pane. Full click-by-click re
 
 ![Power Query Applied Steps for the Permits query](screenshots/applied-steps.png)
 
-### 2. Model — Star schema  *(“Model the data”, ~25%)*
+### 2. Model — Star schema
 A dedicated **Date table** (Austin fiscal year starts Oct 1) marked as the date table, related
 `Permits[Issue Date] → Date[Date]` (many-to-one, single direction). This is what makes the
 time-intelligence DAX work and separates the model from a single flat sheet.
@@ -95,7 +94,7 @@ Real measures (not drag-and-drop sums) covering the `CALCULATE`, `DIVIDE`, time-
 `ALL`, and `RANKX` patterns interviewers look for: Total Valuation, YoY Valuation %, Total
 Valuation YTD, % of Total by district, District Rank, Housing Units Added. See BUILD_GUIDE Part D.
 
-### 4. Dashboard — Visuals  *(“Visualize and analyze”, ~25%)*
+### 4. Dashboard — Visuals
 One-page report: KPI cards → district map → YoY trend line → permit-type & residential/commercial
 bars → district × fiscal-year matrix, with fiscal-year / property-class / permit-type slicers.
 
@@ -175,7 +174,7 @@ austin-permits-powerbi/
 
 > The Python scripts reproduce and validate the Power BI cleaning logic against the real column
 > names, so the numbers in this README are the *actual* data — not placeholders. The Power BI
-> file is where the interactive dashboard and PL-300-graded skills live.
+> file is where the interactive dashboard lives.
 
 ## Reproduce
 
@@ -185,3 +184,9 @@ austin-permits-powerbi/
 python scripts/profile_and_clean.py      # -> data/permits_clean.csv + profiling
 python scripts/final_insights.py         # -> the findings table
 ```
+
+---
+
+## Contact
+
+**Ryder Fiechter** · [LinkedIn](https://www.linkedin.com/in/ryder-fiechter-481527229)
